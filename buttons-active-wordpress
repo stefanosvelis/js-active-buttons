@@ -1,0 +1,27 @@
+# js-active-buttons
+
+//ACTIVE BUTTONS THE APP
+function active_button() {
+
+	echo "
+  
+  <script>
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var pathArray = window.location.pathname.split('/');
+    
+    console.log(pathArray);
+    
+    console.log(pathArray[1]);
+    if (pathArray[2] == ('map-tour'))
+    
+    {
+      //AFTER HTML READ
+         document.getElementById(pathArray[3]).classList.add('active');   
+  
+  }});
+ 
+  </script>";
+}
+//READ FOOTER
+add_action( 'wp_footer', 'active_button', 100 );
